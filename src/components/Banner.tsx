@@ -5,7 +5,7 @@ const Banner = () => {
         <div className="container mx-auto px-12 py-6 flex justify-between items-center">
             <div>
                 <h1 className='text-[#1E1E1E] text-[60px] font-bold'>Build Your Ideal</h1>
-                <h1 className='text-[#ff5722] text-[60px] font-bold'>Development <span className="text-[#ff5722]">Stack</span></h1>
+                <h1 className='text-[60px] font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-transparent'>Development Stack</h1>
                 <p className="text-[#475569]">Explore frontend, backend, database and tooling option,</p>
                 <p className="text-[#475569]">compare them side by side, put togather the stack that fits your</p>
                 <p className="text-[#475569]">next projects</p>

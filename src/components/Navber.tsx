@@ -1,4 +1,4 @@
-import React from 'react';
+
 import logo from "../assets/logo-text.png"
 const Navber = () => {
     return (
@@ -18,7 +18,7 @@ const Navber = () => {
 
                     <div className="flex gap-4">
                         <button className='bg-white text-black'><a href="">Sign In</a></button>
-                        <button className='bg-[#D91B40] text-white border border-[#D91B40] px-2 py-2 rounded-l rounded-r'><a href="">Sign Up</a></button>
+                        <button className='bg-[#D91B40] text-white border px-2 py-2 rounded-full'><a href="">Sign Up</a></button>
                     </div>
 
 
