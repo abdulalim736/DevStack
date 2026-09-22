@@ -8,7 +8,7 @@ interface SidebarProps {
 
 const Sidebar = ({ stack, handleRemoveFromStack, handleRemoveAll }: SidebarProps) => {
     return (
-        <div className="border border-gray-200 rounded-xl p-5 bg-gray-50 sticky top-24">
+        <div className="border border-gray-200 rounded-xl p-5 bg-gray-50 sticky">
             <h2 className="text-xl font-bold mb-2">Your Stack</h2>
             <p className="text-sm text-gray-500 mb-6">{stack.length} Technology Selected</p>
             {stack.length === 0 ? (

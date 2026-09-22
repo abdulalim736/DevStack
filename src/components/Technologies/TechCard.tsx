@@ -1,32 +1,38 @@
-
 import type { Technology } from "../../Types";
 
-
 interface TechCardProps {
-    technology: Technology;
-};
-
-const TechCard = ({ technology }: TechCardProps) => {
+    tech: Technology;
+    stack: Technology[];
+    handleAddToStack: (tech: Technology) => void;
+}
+const TechCard =({ tech, stack, handleAddToStack }: TechCardProps)=> {
+    const isAdded = stack.some((item) => item.id === tech.id);
     return (
-        <div>
-            <div className="card w-70 bg-base-100">
-                <div className="card-body bg-off-white border-1 rounded my-5">
-                    <div className="flex justify-between"> <img className="w-10 h-10" src={technology.icon} alt="" />
-                        <span className="badge badge-xs badge-warning">{technology.badge}</span>
-                    </div>
-                    <h1 className="text-2xl font-bold"> {technology.name}</h1>
-                    <p></p>{technology.description}
-                    <div className="flex justify-between">
-                        <span>{technology.category}</span>
-                        <span>{technology.difficulty}</span>
-                        <span className="flex items-center"><img className="w-5 h-5" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="" /> {technology.rating}</span>
-                    </div>
-
-                    <div className="mt-6">
-                        <button className="btn btn-primary btn-block bg-[#0A0F1D]">Add to Stack</button>
-                    </div>
-                </div>
+        <div className="border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition">
+            <div className="flex justify-between items-center mb-4">
+                <img src={tech.icon} alt={tech.name} className="w-10 h-10" />
+                <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">{tech.badge}</span>
             </div>
+            <h3 className="text-xl font-bold mb-2">{tech.name}</h3>
+            <p className="text-gray-500 text-sm mb-4 line-clamp-2">{tech.description}</p>
+            <div className="flex gap-2 justify-between mb-4">
+            
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">{tech.category}</span>
+                <span className="text-xs bg-gray-100 px-2 py-1 rounded">{tech.difficulty}</span>
+                <div className="flex items-center"> 
+                     <img className="w-3 h-3" src="https://uxwing.com/wp-content/themes/uxwing/download/arts-graphic-shapes/star-icon.png" alt="Star" />
+                    <span className="text-xs bg-gray-100 px-2 py-1 rounded">{tech.rating}</span>
+                </div>
+                
+            </div>
+            <button
+                onClick={() => handleAddToStack(tech)}
+                disabled={isAdded}
+                className={`w-full py-2 rounded-lg font-semibold transition ${isAdded ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-black text-white hover:bg-gray-800'
+                    }`}
+            >
+                {isAdded ? '✓ Added to Stack' : 'Add to Stack'}
+            </button>
         </div>
     );
 };
