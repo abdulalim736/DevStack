@@ -2,13 +2,13 @@ import logo from "../assets/logo-text.png";
 
 const Footer = () => {
     return (
-        <div className="container mx-auto px-12 py-6">
+        <div className="container mx-auto px-12 py-6 mt-6">
             <div className="flex justify-between mt-20">
-                <div className="mt-10">
+                <div>
                     <img src={logo} alt="DevStack logo" />
                     <p> Curated tools, technologies, and resources for developers building<br />
                         modern software.</p>
-                    <ul className="flex gap-4">
+                    <ul className="flex gap-4 mt-6">
                         <li><a href="https://github.com/">GitHub</a></li>
                         <li><a href="https://twitter.com/">Twitter</a></li>
                         <li><a href="https://https://www.linkedin.com//">LinkedIn</a></li>
@@ -41,10 +41,10 @@ const Footer = () => {
             </div>
             <div className="divider"></div>
             <div className="flex justify-between items-center">
-                <p>© 2026 Dev Stack. All rights reserved.</p>
+                <p className="text-[#475569]">© 2026 Dev Stack. All rights reserved.</p>
                 <ul className="flex gap-2">
                     <li className="text-[#475569]"><a href="">Privacy</a></li>
-                    <li className="text-[#475569]"><a href=""></a>Terms</li>
+                    <li className="text-[#475569]"><a href="">Terms</a></li>
                 </ul>
             </div>
 

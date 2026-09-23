@@ -8,6 +8,7 @@ interface TechCardProps {
 const TechCard =({ tech, stack, handleAddToStack }: TechCardProps)=> {
     const isAdded = stack.some((item) => item.id === tech.id);
     return (
+
         <div className="border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition">
             <div className="flex justify-between items-center mb-4">
                 <img src={tech.icon} alt={tech.name} className="w-10 h-10" />
