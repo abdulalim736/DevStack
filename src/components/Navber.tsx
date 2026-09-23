@@ -3,7 +3,7 @@ import logo from "../assets/logo-text.png"
 const Navber = () => {
     return (
         <>
-            <nav>
+            <nav >
                 <div className=" container mx-auto px-12 py-6 flex justify-between">
                     <div className="flex justify-between items-center gap-80">
                         <img src={logo} alt="Logo" />
@@ -18,7 +18,7 @@ const Navber = () => {
 
                     <div className="flex gap-4">
                         <button className='bg-white text-black'><a href="">Sign In</a></button>
-                        <button className='bg-[#D91B40] text-white border px-2 py-2 rounded-full'><a href="">Sign Up</a></button>
+                        <button className="bg-[#D91B7E] text-white px-4 py-2 rounded-full"><a href="">Sign Up</a></button>
                     </div>
 
 

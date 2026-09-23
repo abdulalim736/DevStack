@@ -7,6 +7,7 @@ interface TechListProps {
     technologiesPromise: Promise<Technology[]>;
     stack: Technology[];
     handleAddToStack: (tech: Technology) => void;
+    
 }
 
 const TechList = ({ technologiesPromise, stack, handleAddToStack }: TechListProps) => {
