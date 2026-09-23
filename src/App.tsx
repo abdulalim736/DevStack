@@ -18,8 +18,8 @@ const techDataFetch = async () => {
 
 function App() {
   const [stack, setStack] = useState<Technology[]>([]);
-  const technologiesPromise = techDataFetch();
-
+  
+  const [technologiesPromise] = useState(()=>techDataFetch());
 
 
   const handleAddToStack = (tech: Technology) => {
