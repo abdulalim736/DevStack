@@ -55,7 +55,7 @@ function App() {
             <p className='text-[#475569]'>Pick one technology per category to build your ideal stack.</p>
           </div>
 
-          <div className='grid grid-cols-4 gap-5'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
             <Suspense fallback={<div>Loading Data...</div>}>
               <TechList
                 technologiesPromise={technologiesPromise}

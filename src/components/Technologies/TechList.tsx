@@ -14,7 +14,7 @@ const TechList = ({ technologiesPromise, stack, handleAddToStack }: TechListProp
     const technologies = use(technologiesPromise);
     return (
      
-        <div className="col-span-3 grid grid-cols-3 gap-5">
+        <div className="col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {technologies.map((tech) => (
                 <TechCard key={tech.id} tech={tech} stack={stack} handleAddToStack={handleAddToStack} />
             ))}

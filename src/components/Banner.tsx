@@ -6,7 +6,7 @@ const Banner = () => {
         <div className="container mx-auto flex items-center justify-between px-12 py-6">
             <div>
                 <h1 className="text-5xl font-bold">Build Your Ideal</h1>
-                <h1 className="bg-gradient-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-5xl font-bold text-transparent">
+                <h1 className="bg-linear-to-r from-orange-500 via-pink-500 to-violet-500 bg-clip-text text-5xl font-bold text-transparent">
                     Development Stack
                 </h1>
                 <p className="mt-4 text-[#475569]">
